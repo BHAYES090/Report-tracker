@@ -24,6 +24,5 @@ namespace WPFTRACKERUI.Views
         {
             InitializeComponent();
         }
-
     }
 }

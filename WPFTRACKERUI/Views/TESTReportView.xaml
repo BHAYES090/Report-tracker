@@ -52,7 +52,7 @@
                 Width="180" Height="50"/>
 
         <Button x:Name="CreateReport" Grid.Row="6" Grid.Column="3" Width="180" HorizontalAlignment="Center"
-                Content="Create Report" Margin="100 126 0 84" Padding="5" Height="50" />
+                Content="Create Report" Margin="100 126 0 84" Padding="5" Height="50"/>
 
     </Grid>
 </UserControl>

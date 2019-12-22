@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRACKERUI", "TRACKERUI\TRACKERUI.csproj", "{64D55516-A882-4809-8151-80B1212D4115}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerLibrary2", "ClassLibrary3\TrackerLibrary2.csproj", "{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DATA", "DATA\DATA.sqlproj", "{E94139ED-4658-4F8F-9F14-FB29625A593A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTRACKERUI", "WPFTRACKERUI\WPFTRACKERUI.csproj", "{87E77F35-E124-4F4B-B9B3-724C02BB14A3}"
@@ -16,6 +12,39 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDataManager.Library", "RTDataManager.Library\RTDataManager.Library.csproj", "{7996B59C-844D-4046-AF66-14521EEEA650}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDesktopUI.Library", "RTDesktopUI.Library\RTDesktopUI.Library.csproj", "{A90B338E-6F0B-436F-994E-832CF080FFC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Refrences", "Refrences", "{B160A660-6073-4B48-8220-C2879050E3BC}"
+	ProjectSection(SolutionItems) = preProject
+		RTDesktopUI.Library\Models\CartItemModel.cs = RTDesktopUI.Library\Models\CartItemModel.cs
+		DATA\dbo\Tables\Inventory.sql = DATA\dbo\Tables\Inventory.sql
+		RTDesktopUI.Library\API\IProductEndpoint.cs = RTDesktopUI.Library\API\IProductEndpoint.cs
+		RTDesktopUI.Library\API\ISaleEndpoint.cs = RTDesktopUI.Library\API\ISaleEndpoint.cs
+		DATA\dbo\Tables\Product.sql = DATA\dbo\Tables\Product.sql
+		DataManager1\Controllers\ProductController.cs = DataManager1\Controllers\ProductController.cs
+		RTDataManager.Library\DataAccess\ProductData.cs = RTDataManager.Library\DataAccess\ProductData.cs
+		RTDesktopUI.Library\API\ProductEndpoint.cs = RTDesktopUI.Library\API\ProductEndpoint.cs
+		RTDesktopUI.Library\Models\ProductModel.cs = RTDesktopUI.Library\Models\ProductModel.cs
+		RTDataManager.Library\Models\ProductModel.cs = RTDataManager.Library\Models\ProductModel.cs
+		DATA\dbo\Tables\Sale.sql = DATA\dbo\Tables\Sale.sql
+		DataManager1\Controllers\SaleController.cs = DataManager1\Controllers\SaleController.cs
+		RTDataManager.Library\DataAccess\SaleData.cs = RTDataManager.Library\DataAccess\SaleData.cs
+		RTDataManager.Library\Models\SaleDBModel.cs = RTDataManager.Library\Models\SaleDBModel.cs
+		DATA\dbo\Tables\SaleDetail.sql = DATA\dbo\Tables\SaleDetail.sql
+		RTDesktopUI.Library\Models\SaleDetailModel.cs = RTDesktopUI.Library\Models\SaleDetailModel.cs
+		RTDataManager.Library\Models\SaleDetailModel.cs = RTDataManager.Library\Models\SaleDetailModel.cs
+		RTDataManager.Library\Models\SaleDetialDBModel.cs = RTDataManager.Library\Models\SaleDetialDBModel.cs
+		RTDesktopUI.Library\API\SaleEndpoint.cs = RTDesktopUI.Library\API\SaleEndpoint.cs
+		RTDesktopUI.Library\Models\SaleModel.cs = RTDesktopUI.Library\Models\SaleModel.cs
+		RTDataManager.Library\Models\SaleModel.cs = RTDataManager.Library\Models\SaleModel.cs
+		WPFTRACKERUI\Views\SalesView.xaml = WPFTRACKERUI\Views\SalesView.xaml
+		WPFTRACKERUI\Views\SalesView.xaml.cs = WPFTRACKERUI\Views\SalesView.xaml.cs
+		WPFTRACKERUI\ViewModels\SalesViewModel.cs = WPFTRACKERUI\ViewModels\SalesViewModel.cs
+		DATA\dbo\Stored Procedures\spProducts_GetAll.sql = DATA\dbo\Stored Procedures\spProducts_GetAll.sql
+		DATA\dbo\Stored Procedures\spProducts_GetById.sql = DATA\dbo\Stored Procedures\spProducts_GetById.sql
+		DATA\dbo\Stored Procedures\spSale_Insert.sql = DATA\dbo\Stored Procedures\spSale_Insert.sql
+		DATA\dbo\Stored Procedures\spSale_LookUp.sql = DATA\dbo\Stored Procedures\spSale_LookUp.sql
+		DATA\dbo\Stored Procedures\spSaleDetail_Insert.sql = DATA\dbo\Stored Procedures\spSaleDetail_Insert.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,46 +60,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|ARM.Build.0 = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|x64.Build.0 = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Debug|x86.Build.0 = Debug|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|ARM.ActiveCfg = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|ARM.Build.0 = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|ARM64.Build.0 = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|x64.ActiveCfg = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|x64.Build.0 = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|x86.ActiveCfg = Release|Any CPU
-		{64D55516-A882-4809-8151-80B1212D4115}.Release|x86.Build.0 = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|ARM.Build.0 = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|x64.Build.0 = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Debug|x86.Build.0 = Debug|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|ARM.ActiveCfg = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|ARM.Build.0 = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|ARM64.Build.0 = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|x64.ActiveCfg = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|x64.Build.0 = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|x86.ActiveCfg = Release|Any CPU
-		{65A6EC34-5A5C-43A3-A9E8-0DF118C1E8E4}.Release|x86.Build.0 = Release|Any CPU
 		{E94139ED-4658-4F8F-9F14-FB29625A593A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E94139ED-4658-4F8F-9F14-FB29625A593A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E94139ED-4658-4F8F-9F14-FB29625A593A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

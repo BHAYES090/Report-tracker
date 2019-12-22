@@ -4,28 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFTRACKERUI.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" Background="White" FontSize="24"
              d:DesignHeight="414" d:DesignWidth="750">
-    <Grid Background="#999999">
+    <Grid>
+        <!--<Grid.Background>
+            --><!--<ImageBrush ImageSource="Vision_fantástica_o_Asmodea_(Goya).jpg"/>--><!--
+        </Grid.Background>-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="64" 
-                   FontFamily="Calibri Light" MaxWidth="450">
+
+        <!--<Rectangle Grid.ColumnSpan="4" Grid.RowSpan="8" Margin="2,83,188,86" Fill="DarkSlateGray" RadiusY="10" RadiusX="10" Grid.Column="1"/>-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="40" 
+                   FontFamily="Monotype Corsiva" MaxWidth="450" Foreground="#FF970B0B">
             Login
         </TextBlock>
-
         <!-- Error Message row -->
         <TextBlock x:Name="ErrorMessage" 
                    Visibility="{Binding IsErrorVisable, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
@@ -34,24 +42,27 @@
                    TextWrapping="Wrap" Margin="0 0 0 20"/>
 
         <!-- User Name Row -->
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 0 20 20" FontFamily="Calibri Light">
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="18 9 2 11" FontSize="18" FontFamily="Monotype Corsiva" Foreground="#FFAE1010">
             Username:
         </TextBlock>
-        <TextBox x:Name="UserName" Grid.Row="2" Grid.Column="2" MinWidth="350" 
-                 Margin="0 0 0 10" />
+        <TextBox x:Name="UserName" Grid.Row="3" Grid.Column="2" MinWidth="250" 
+                 Margin="0 0 0 10" FontSize="24" Foreground="Black" Background="#FFABADB3" FontFamily="Microsoft Sans Serif" Opacity="0.5"/>
 
         <!--Password row-->
-        <TextBlock Grid.Row="3" Grid.Column="1" Margin="0 0 20 20" FontFamily="Calibri Light">
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="18 9 2 11" FontSize="18"  FontFamily="Monotype Corsiva" Foreground="#FF970B0B">
             Password:
         </TextBlock>
-        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" MinWidth="350"
-                     Margin="0 0 0 10"/>
+        <PasswordBox x:Name="Password" Grid.Row="4" Grid.Column="2" MinWidth="250"
+                     Margin="0 0 0 10" Background="#FFABADB3" FontFamily="Microsoft Sans Serif" Opacity="0.5"/>
 
         <!-- Login row -->
-        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Padding="20 5"
-                HorizontalAlignment="Center" x:Name="LogIn" FontFamily="Calibri Light">
+        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Padding="20 5"
+                HorizontalAlignment="Center" x:Name="LogIn" FontFamily="Monotype Corsiva" Opacity="0.7" Click="LogIn_Click">
             Log In
         </Button>
+        <!--<Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Background="#FF851515">
+            <materialDesign:PackIcon Kind="Login"/>
+        </Button>-->
 
     </Grid>
 </UserControl>

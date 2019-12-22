@@ -36,7 +36,7 @@ namespace WPFTRACKERUI.ViewModels
 
         public void Handle(LogOnEvent message)
         {
-            ActivateItem(/*_salesVM _testReportVM, */_createReportVM);
+            ActivateItem(/*_salesVM_testReportVM */ _createReportVM);
         }
     }
 }

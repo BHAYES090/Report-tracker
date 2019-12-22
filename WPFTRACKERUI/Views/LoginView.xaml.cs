@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFTRACKERUI.ViewModels;
 
 namespace WPFTRACKERUI.Views
 {
@@ -23,6 +24,13 @@ namespace WPFTRACKERUI.Views
         public LoginView()
         {
             InitializeComponent();
+        }
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            CreateReportView subWindow = new CreateReportView();
+            var host = new Window();
+            host.Content = subWindow;
+            host.Show();
         }
     }
 }

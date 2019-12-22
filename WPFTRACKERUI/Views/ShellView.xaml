@@ -18,8 +18,8 @@
         </Menu>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="28*"/>
             </Grid.ColumnDefinitions>
             <ContentControl x:Name="ActiveItem" Margin="5" Grid.ColumnSpan="2" Content="" />
         </Grid>

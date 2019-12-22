@@ -44,23 +44,19 @@
   <ItemGroup>
     <Compile Include="API\APIHelper.cs" />
     <Compile Include="API\IAPIHelper.cs" />
-    <Compile Include="API\IProductEndpoint.cs" />
     <Compile Include="API\IReportEndpoint.cs" />
-    <Compile Include="API\ISaleEndpoint.cs" />
-    <Compile Include="API\ProductEndpoint.cs" />
     <Compile Include="API\ReportEndpoint.cs" />
-    <Compile Include="API\SaleEndpoint.cs" />
+    <Compile Include="Configuration\Enums.cs" />
+    <Compile Include="Configuration\GlobalConfig.cs" />
+    <Compile Include="DataAndSQL\IDataConnection.cs" />
+    <Compile Include="DataAndSQL\SQLConnector.cs" />
     <Compile Include="EventModels\LogOnEvent.cs" />
     <Compile Include="Helpers\ConfigHelper.cs" />
     <Compile Include="Helpers\IConfigHelper.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
-    <Compile Include="Models\CartItemModel.cs" />
     <Compile Include="Models\ILoggedInUserModel.cs" />
     <Compile Include="Models\LoggedInUserModel.cs" />
-    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ReportModel.cs" />
-    <Compile Include="Models\SaleDetailModel.cs" />
-    <Compile Include="Models\SaleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,5 +70,6 @@
       <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
