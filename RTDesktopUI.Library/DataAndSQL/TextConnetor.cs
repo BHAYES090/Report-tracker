@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace RTDesktopUI.Library.DataAndSQL
 {
-    public interface IDataConnection
+    public class TextConnetor : IDataConnection
     {
-        ReportModel CreateReport(ReportModel model);
+        public ReportModel CreateReport(ReportModel model)
+        {
+            model.Id = 1;
+
+            return model;
+        }
     }
 }

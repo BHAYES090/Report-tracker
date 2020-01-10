@@ -15,28 +15,29 @@ namespace RTDesktopUI.Library.DataAndSQL
 {
     public class SQLConnector : IDataConnection
     {
-
-        public ReportModel CreateReport(ReportModel m)
+        public ReportModel CreateReport(ReportModel model)
         {
-            
-
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("REPORTSDATASQL")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection
+                (GlobalConfig.CnnString("REPORTSDATASQL")))
             {
-                
                 var P = new DynamicParameters();
-                P.Add("UserNameEmailAddress", m.UserNameEmailAddress);;
-                P.Add("PhoneNumber", m.PhoneNumber);
-                P.Add("CommentBox", m.CommentBox);
-                P.Add("CreateDate", m.CreateDate);
+                P.Add("UserNameEmailAddress", model.UserNameEmailAddress); ;
+                P.Add("PhoneNumber", model.PhoneNumber);
+                P.Add("CommentBox", model.CommentBox);
+                P.Add("CreateDate", model.CreateDate);
                 P.Add("Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
-                
+
                 connection.Execute("dbo.spInterReport_Post", P, commandType: CommandType.StoredProcedure);
                 
                 //model.Id = P.Get<int>("@Id");
 
-                return m;
+                return model;
             }
         }
+        //public ReportModel CreateReport(ReportModel model)
+        //{
+        //    
+        //}
         //public void SaveReport(RTDesktopUI.Library.Models.ReportModel report)
         //{
         //    SqlDataAccess sql = new SqlDataAccess();

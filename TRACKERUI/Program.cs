@@ -1,11 +1,6 @@
-﻿using ClassLibrary3;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
-using TrackerLibrary2;
+using TRACKERLIBRARY.DataAccess;
 
 namespace TRACKERUI
 {
@@ -21,8 +16,8 @@ namespace TRACKERUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             //initalize database connections
-            TrackerLibrary2.GlobalConfig2.InitializeConnections(DatabaseType.Sql);
-            Application.Run(new REPORTDASHBOARD());
+            TRACKERLIBRARY.GlobalConfig.InitializeConnections(DatabaseType.Sql);
+            Application.Run(new CREATEREPORTFORM());
         }
     }
 }

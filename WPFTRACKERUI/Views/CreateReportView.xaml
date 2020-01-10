@@ -34,28 +34,30 @@
         <TextBlock Text="Create Report Form" TextDecorations="Underline" FontSize="38" Grid.Row="0" 
                    Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0 0 0 0"/>
         <!--Column 0-->
-        <TextBlock Text="Screenshot" Grid.Row="1" Margin="10 0 0 0"/>
+        <!--<TextBlock Text="Screenshot" Grid.Row="1" Margin="10 0 0 0"/>-->
         <!--<ListBox  x:Name="Screenshot_Insert" Grid.Row="2" Grid.RowSpan="5"  
                  MinHeight="200" MinWidth="200" Margin="10 0 10 0">
-            --><!--List box to change to Image box of some sort --><!--
+            -->
+        <!--List box to change to Image box of some sort -->
+        <!--
         </ListBox>-->
         <!--<TextBlock x:Name="EmailAddressLabel" Text="Email Address: " Grid.Column="1" Grid.Row="4"/>
         <TextBox x:Name="EmailAddressBox" MinWidth="100" Grid.Row="4" Grid.Column="2" Margin="0 0 0 20"/>-->
         <TextBlock x:Name="DateLabel" Text="Date:" Grid.Column="1" Grid.Row="2"/>
-        <DatePicker x:Name="CreateDateValue" Grid.Column="2" Grid.Row="2" Margin="0 0 0 20"/>
+        <DatePicker x:Name="CreateDate" Grid.Column="2" Grid.Row="2" Margin="0 0 0 20"/>
         <TextBlock x:Name="UserNameEmailAddressLabel" Text="Email Address: " Grid.Column="1" Grid.Row="3"/>
-        <TextBox x:Name="UserNameEmailAddressValue" MinWidth="100" Grid.Column="2" Grid.Row="3" Margin="0 0 0 20"/>
+        <TextBox x:Name="UserNameEmailAddress" MinWidth="100" Grid.Column="2" Grid.Row="3" Margin="0 0 0 20"/>
         <TextBlock x:Name="PhoneNumberLabel" Text="Phone Number: " Grid.Column="1" Grid.Row="5"/>
-        <TextBox x:Name="PhoneNumberValue" MinWidth="100" Grid.Row="5" Grid.Column="2" Margin="0 0 0 20"/>
+        <TextBox x:Name="PhoneNumber" MinWidth="100" Grid.Row="5" Grid.Column="2" Margin="0 0 0 20"/>
         <TextBlock x:Name="CommentsLabel" TextDecorations="Underline" Grid.Column="3" Grid.Row="1" Text="Comments:"/>
-        <TextBox x:Name="CommentBoxValue" Grid.Row="2" Grid.RowSpan="5" Grid.Column="3" Margin="10 0 10 0" TextWrapping="Wrap"/>
+        <TextBox x:Name="CommentBox" Grid.Row="2" Grid.RowSpan="5" Grid.Column="3" Margin="10 0 10 0" TextWrapping="Wrap"/>
         <!--<TextBlock x:Name="FileNameLabel" Text="File Name: " Grid.Row="7"/>-->
         <!--<Button x:Name="BrowseButton" Content="Browse..." Grid.Row="8" Margin="50 10 50 10"/>
         <Button x:Name="selectButton" Content="Select" Grid.Row="9" Margin="50 10 50 10"/>-->
-        <Button x:Name="CreateReport" Click="CreateReport_Click" Content="Create Report" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="50,0,50,2" Grid.RowSpan="2" Height="33" VerticalAlignment="Bottom"  />
-       
-        <TextBlock x:Name="AdminInformation" Text="Administator Information: " TextDecorations="Underline" Grid.Column="3" Grid.Row="7" FontSize="16"/>
+        <Button x:Name="CreateReport"  Content="Create Report" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="50,1,50,1.5" Grid.RowSpan="2" Click="CreateReport_Click"  />
+        <!--Click="CreateReport_Click"-->
+        <!--<TextBlock x:Name="AdminInformation" Text="Administator Information: " TextDecorations="Underline" Grid.Column="3" Grid.Row="7" FontSize="16"/>
         <TextBlock x:Name="AdminInformationContinued" Text="Admin info continued" Grid.Column="3" Grid.Row="8"/>
-        <TextBlock x:Name="ReportQuantity"/>
+        <TextBlock x:Name="ReportQuantity"/>-->
     </Grid>
 </UserControl>

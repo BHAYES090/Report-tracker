@@ -52,12 +52,10 @@ namespace TRACKERUI
             this.SelectImageButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblFileName = new System.Windows.Forms.Label();
-            this.rEPORTSSQLDataSet = new TRACKERUI.REPORTSSQLDataSet();
+           
             this.interReportTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.interReportTableTableAdapter = new TRACKERUI.REPORTSSQLDataSetTableAdapters.InterReportTableTableAdapter();
-            this.tableAdapterManager = new TRACKERUI.REPORTSSQLDataSetTableAdapters.TableAdapterManager();
+          
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEPORTSSQLDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interReportTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +78,6 @@ namespace TRACKERUI
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "DATE ";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // CreateDateValue
             // 
@@ -145,7 +142,7 @@ namespace TRACKERUI
             this.UserNameValue.Name = "UserNameValue";
             this.UserNameValue.Size = new System.Drawing.Size(196, 26);
             this.UserNameValue.TabIndex = 8;
-            this.UserNameValue.TextChanged += new System.EventHandler(this.UserNameValue_TextChanged);
+            //this.UserNameValue.TextChanged += new System.EventHandler(this.UserNameValue_TextChanged);
             // 
             // EmailAddressValue
             // 
@@ -238,7 +235,6 @@ namespace TRACKERUI
             this.BrowseButton.TabIndex = 18;
             this.BrowseButton.Text = "Browse...";
             this.BrowseButton.UseVisualStyleBackColor = true;
-            this.BrowseButton.Click += new System.EventHandler(this.BrowseButton_Click);
             // 
             // SelectImageButton
             // 
@@ -273,29 +269,9 @@ namespace TRACKERUI
             this.lblFileName.Size = new System.Drawing.Size(15, 17);
             this.lblFileName.TabIndex = 23;
             this.lblFileName.Text = "?";
-            // 
-            // rEPORTSSQLDataSet
-            // 
-            this.rEPORTSSQLDataSet.DataSetName = "REPORTSSQLDataSet";
-            this.rEPORTSSQLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // interReportTableBindingSource
-            // 
+
             this.interReportTableBindingSource.DataMember = "InterReportTable";
-            this.interReportTableBindingSource.DataSource = this.rEPORTSSQLDataSet;
-            // 
-            // interReportTableTableAdapter
-            // 
-            this.interReportTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.InterReportTableTableAdapter = this.interReportTableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = TRACKERUI.REPORTSSQLDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // CREATEREPORTFORM
-            // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -325,9 +301,9 @@ namespace TRACKERUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CREATEREPORTFORM";
             this.Text = "CREATE REPORT FORM ";
-            this.Load += new System.EventHandler(this.CREATEREPORTFORM_Load);
+            //this.Load += new System.EventHandler(this.CREATEREPORTFORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEPORTSSQLDataSet)).EndInit();
+           
             ((System.ComponentModel.ISupportInitialize)(this.interReportTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -362,10 +338,10 @@ namespace TRACKERUI
         private System.Windows.Forms.Button SelectImageButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblFileName;
-        private REPORTSSQLDataSet rEPORTSSQLDataSet;
+     //   private REPORTSSQLDataSet rEPORTSSQLDataSet;
         private System.Windows.Forms.BindingSource interReportTableBindingSource;
-        private REPORTSSQLDataSetTableAdapters.InterReportTableTableAdapter interReportTableTableAdapter;
-        private REPORTSSQLDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+       // private REPORTSSQLDataSetTableAdapters.InterReportTableTableAdapter interReportTableTableAdapter;
+        //private REPORTSSQLDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
 

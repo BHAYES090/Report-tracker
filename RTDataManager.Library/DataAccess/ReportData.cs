@@ -11,19 +11,11 @@ namespace RTDataManager.Library.DataAccess
 {
     public class ReportData
     {
-        public void SaveReport(RTDesktopUI.Library.Models.ReportModel report)
+        public void SaveReport(RTDataManager.Library.Models.ReportModel report, string userId)
         {
             SqlDataAccess sql = new SqlDataAccess();
 
             sql.SaveData("dbo.spInterReport_Post", report, "REPORTSDATASQL");
         }
-        //public List<ReportModel> GetReport()
-        //{
-        //    SqlDataAccess sql = new SqlDataAccess();
-
-        //    var output = sql.LoadData<ReportModel, dynamic>("dbo.spInterReport_Post", new { }, "REPORTSDATASQL");
-
-        //    return output;
-        //}
     }
 }

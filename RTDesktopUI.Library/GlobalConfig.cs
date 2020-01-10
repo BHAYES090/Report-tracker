@@ -1,5 +1,7 @@
-﻿using Enums;
+﻿
+using RTDesktopUI.Library.Configuration;
 using RTDesktopUI.Library.DataAndSQL;
+using RTDesktopUI.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,23 +10,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RTDesktopUI.Library.Configuration
+namespace RTDesktopUI.Library
 {
-
     public static class GlobalConfig
     {
-        public static IDataConnection Connection { get; set; }
-            
-
+        public static IDataConnection Connection { get; private set; }
+        
         public static void InitializeConnections(DatabaseType db)
         {
             if (db == DatabaseType.Sql)
             {
-                // TODO -- Set up SQL Connector Properly
+                //TODO  set up SQL Connector properly
                 SQLConnector sql = new SQLConnector();
                 Connection = sql;
             }
-
+            else if (db == DatabaseType.TextFile)
+            {
+                //TODO - do something
+                TextConnetor text = new TextConnetor();
+                Connection = text;
+            }
             //else if (db == DatabaseType.TextFile)
             //{
             //    // TODO -- Set up the text connector proerly, 
@@ -36,9 +41,7 @@ namespace RTDesktopUI.Library.Configuration
         }
         public static string CnnString(string name)
         {
-            
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-           
         }
     }
 

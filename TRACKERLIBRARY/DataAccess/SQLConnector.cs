@@ -34,7 +34,7 @@ namespace TRACKERLIBRARY.DataAccess
 
                 connection.Execute("dbo.spInterReportTable_Insert", P, commandType: CommandType.StoredProcedure);
 
-                model.id = P.Get<int>("@id");
+                //model.Id = P.Get<int>("@id");
 
                 return model;
             }
