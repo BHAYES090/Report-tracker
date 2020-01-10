@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRACKERLIBRARY
 {
-    public class REPORTS
+    class REPORTS
     {
         public string Name { get; set; }
         public string Details { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using TrackerLibrary2;
 
 namespace TRACKERUI
 {
@@ -22,39 +23,39 @@ namespace TRACKERUI
 
         private void BUTTON_Click(object sender, EventArgs e)
         {
-            //if (ValidateForm())
-            //{
-            //    REPORTMODEL2 F = new REPORTMODEL2();
-            //    F.ReportName = ReportNameValue.Text;
-            //    F.ReportID = ReportIDValue.Text;
-            //    F.Severity = SeverityValue.Text;
-            //    F.ReportStatus = ReportStatusValue.Text;
-            //    F.Comments = CommentValue.Text;
-            //    F.Details = DetailsValue.Text;
-            //    F.BugBehavior = BugBehaviorValue.Text;
-            //    F.Solutions = Solutionvalue.Text;
-            //    F.FirstReported = DateFirstReportedValue.Value;
-            //    F.FirstREPORTER = FirstReporterValue.Text;
+            if (ValidateForm())
+            {
+                REPORTMODEL2 F = new REPORTMODEL2();
+                F.ReportName = ReportNameValue.Text;
+                F.ReportID = ReportIDValue.Text;
+                F.Severity = SeverityValue.Text;
+                F.ReportStatus = ReportStatusValue.Text;
+                F.Comments = CommentValue.Text;
+                F.Details = DetailsValue.Text;
+                F.BugBehavior = BugBehaviorValue.Text;
+                F.Solutions = Solutionvalue.Text;
+                F.FirstReported = DateFirstReportedValue.Value;
+                F.FirstREPORTER = FirstReporterValue.Text;
 
-            //    GlobalConfig2.Connection.CreateReport(F);
-            //    ReportNameValue.Text = "";
-            //    ReportIDValue.Text = "";
-            //    SeverityValue.Text = "";
-            //    ReportStatusValue.Text = "";
-            //    CommentValue.Text = "";
-            //    DetailsValue.Text = "";
-            //    BugBehaviorValue.Text = "";
-            //    Solutionvalue.Text = "";
-            //    DateFirstReportedValue.Text = "";
-            //    FirstReporterValue.Text = "";
+                GlobalConfig2.Connection.CreateReport(F);
+                ReportNameValue.Text = "";
+                ReportIDValue.Text = "";
+                SeverityValue.Text = "";
+                ReportStatusValue.Text = "";
+                CommentValue.Text = "";
+                DetailsValue.Text = "";
+                BugBehaviorValue.Text = "";
+                Solutionvalue.Text = "";
+                DateFirstReportedValue.Text = "";
+                FirstReporterValue.Text = "";
 
-            //}
+            }
 
-            //else
-            //{
-            //    MessageBox.Show("This form has invalid information. " +
-            //        "Please check your entries and try again");
-            //}
+            else
+            {
+                MessageBox.Show("This form has invalid information. " +
+                    "Please check your entries and try again");
+            }
         }
         private bool ValidateForm()
         {

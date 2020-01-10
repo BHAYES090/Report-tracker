@@ -31,6 +31,7 @@ namespace TRACKERLIBRARY.models
         public string BugBehavior { get; set; }
         public int DateTime { get; set; }
         public string Solutions { get; set; }
+       
         public int FirstReported { get; set; }
         public string FirstREPORTER { get; set; }
         public string Screenshot { get; set; }

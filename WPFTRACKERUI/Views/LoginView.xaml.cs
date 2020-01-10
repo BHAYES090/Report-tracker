@@ -1,4 +1,18 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using WPFTRACKERUI.ViewModels;
 
 namespace WPFTRACKERUI.Views
 {
@@ -11,12 +25,12 @@ namespace WPFTRACKERUI.Views
         {
             InitializeComponent();
         }
-        //private void LogIn_Click(object sender, RoutedEventArgs e)
-        //{
-        //    CreateReportView subWindow = new CreateReportView();
-        //    var host = new Window();
-        //    host.Content = subWindow;
-        //    host.Show();
-        //}
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            CreateReportView subWindow = new CreateReportView();
+            var host = new Window();
+            host.Content = subWindow;
+            host.Show();
+        }
     }
 }

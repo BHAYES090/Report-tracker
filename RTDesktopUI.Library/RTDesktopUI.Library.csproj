@@ -47,16 +47,14 @@
     <Compile Include="API\IReportEndpoint.cs" />
     <Compile Include="API\ReportEndpoint.cs" />
     <Compile Include="Configuration\Enums.cs" />
-    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="Configuration\GlobalConfig.cs" />
     <Compile Include="DataAndSQL\IDataConnection.cs" />
     <Compile Include="DataAndSQL\SQLConnector.cs" />
-    <Compile Include="DataAndSQL\TextConnetor.cs" />
     <Compile Include="EventModels\LogOnEvent.cs" />
     <Compile Include="Helpers\ConfigHelper.cs" />
     <Compile Include="Helpers\IConfigHelper.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\ILoggedInUserModel.cs" />
-    <Compile Include="Models\IReportModel.cs" />
     <Compile Include="Models\LoggedInUserModel.cs" />
     <Compile Include="Models\ReportModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

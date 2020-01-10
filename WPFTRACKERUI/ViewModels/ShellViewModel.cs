@@ -11,7 +11,6 @@ namespace WPFTRACKERUI.ViewModels
 {
     public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
     {
-        //RTDesktopUI.Library.Configuration.GlobalConfig.InitializeConnections(true, true)
         private IEventAggregator _events;
         //private SalesViewModel _salesVM;
         //private TESTReportViewModel _testReportVM;

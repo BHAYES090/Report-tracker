@@ -8,19 +8,24 @@ namespace TRACKERLIBRARY
 {
     public static class GlobalConfig
     {
-        public static IDataConnection Connection { get; private set; }
+        public static List<IDataConnection> Connections { get; private set; }
+            = new List<IDataConnection>();
 
-        public static void InitializeConnections(DatabaseType db)
+        public static void InitializeConnections(bool database, bool textFiles)
         {
-            if (db == DatabaseType.Sql)
+            if (database == true)
             {
+                // TODO -- Set up SQL Connector Properly
                 SQLConnector sql = new SQLConnector();
-                Connection =sql;
+                Connections.Add(sql);
             }
-            else if (db == DatabaseType.TextFile)
+            if (textFiles == true)
             {
+                // TODO -- Set up the text connector proerly, 
+                // TODO -- double check to see if TextConnector is the same
+                // TODO -- as TextConnection
                 TextConnector text = new TextConnector();
-                Connection = text;
+                Connections.Add(text);
             }
         }
         public static string CnnString(string name)

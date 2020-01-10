@@ -16,7 +16,7 @@ namespace TRACKERLIBRARY.DataAccess
         /// <returns></returns>
         public INTERREPORTMODEL CreateInterReport(INTERREPORTMODEL model)
         {
-            //model.Id = 1;
+            model.id = 1;
 
             return model;
         }

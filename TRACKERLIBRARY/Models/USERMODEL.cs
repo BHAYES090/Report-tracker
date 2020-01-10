@@ -8,6 +8,6 @@ namespace TRACKERLIBRARY.models
     {
         public List<USERS> UserTracker { get; set; } = new List<USERS>();
         public string UserNames { get; set; }
-        public string FirstName { get; set; }
+
     }
 }

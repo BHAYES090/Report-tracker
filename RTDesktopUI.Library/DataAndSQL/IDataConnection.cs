@@ -9,6 +9,10 @@ namespace RTDesktopUI.Library.DataAndSQL
 {
     public interface IDataConnection
     {
-        ReportModel CreateReport(ReportModel model);
+        ReportModel CreateReport(ReportModel m);
+        
+        //USERMODEL2 CreateUserAccount(USERMODEL2 model);
+        //REPORTMODEL2 CreateReport(REPORTMODEL2 model);
+        ////List<REPORTMODEL2> GetReport_All();
     }
 }
