@@ -13,39 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDataManager.Library", "RT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTDesktopUI.Library", "RTDesktopUI.Library\RTDesktopUI.Library.csproj", "{A90B338E-6F0B-436F-994E-832CF080FFC4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Refrences", "Refrences", "{B160A660-6073-4B48-8220-C2879050E3BC}"
-	ProjectSection(SolutionItems) = preProject
-		RTDesktopUI.Library\Models\CartItemModel.cs = RTDesktopUI.Library\Models\CartItemModel.cs
-		DATA\dbo\Tables\Inventory.sql = DATA\dbo\Tables\Inventory.sql
-		RTDesktopUI.Library\API\IProductEndpoint.cs = RTDesktopUI.Library\API\IProductEndpoint.cs
-		RTDesktopUI.Library\API\ISaleEndpoint.cs = RTDesktopUI.Library\API\ISaleEndpoint.cs
-		DATA\dbo\Tables\Product.sql = DATA\dbo\Tables\Product.sql
-		DataManager1\Controllers\ProductController.cs = DataManager1\Controllers\ProductController.cs
-		RTDataManager.Library\DataAccess\ProductData.cs = RTDataManager.Library\DataAccess\ProductData.cs
-		RTDesktopUI.Library\API\ProductEndpoint.cs = RTDesktopUI.Library\API\ProductEndpoint.cs
-		RTDesktopUI.Library\Models\ProductModel.cs = RTDesktopUI.Library\Models\ProductModel.cs
-		RTDataManager.Library\Models\ProductModel.cs = RTDataManager.Library\Models\ProductModel.cs
-		DATA\dbo\Tables\Sale.sql = DATA\dbo\Tables\Sale.sql
-		DataManager1\Controllers\SaleController.cs = DataManager1\Controllers\SaleController.cs
-		RTDataManager.Library\DataAccess\SaleData.cs = RTDataManager.Library\DataAccess\SaleData.cs
-		RTDataManager.Library\Models\SaleDBModel.cs = RTDataManager.Library\Models\SaleDBModel.cs
-		DATA\dbo\Tables\SaleDetail.sql = DATA\dbo\Tables\SaleDetail.sql
-		RTDesktopUI.Library\Models\SaleDetailModel.cs = RTDesktopUI.Library\Models\SaleDetailModel.cs
-		RTDataManager.Library\Models\SaleDetailModel.cs = RTDataManager.Library\Models\SaleDetailModel.cs
-		RTDataManager.Library\Models\SaleDetialDBModel.cs = RTDataManager.Library\Models\SaleDetialDBModel.cs
-		RTDesktopUI.Library\API\SaleEndpoint.cs = RTDesktopUI.Library\API\SaleEndpoint.cs
-		RTDesktopUI.Library\Models\SaleModel.cs = RTDesktopUI.Library\Models\SaleModel.cs
-		RTDataManager.Library\Models\SaleModel.cs = RTDataManager.Library\Models\SaleModel.cs
-		WPFTRACKERUI\Views\SalesView.xaml = WPFTRACKERUI\Views\SalesView.xaml
-		WPFTRACKERUI\Views\SalesView.xaml.cs = WPFTRACKERUI\Views\SalesView.xaml.cs
-		WPFTRACKERUI\ViewModels\SalesViewModel.cs = WPFTRACKERUI\ViewModels\SalesViewModel.cs
-		DATA\dbo\Stored Procedures\spProducts_GetAll.sql = DATA\dbo\Stored Procedures\spProducts_GetAll.sql
-		DATA\dbo\Stored Procedures\spProducts_GetById.sql = DATA\dbo\Stored Procedures\spProducts_GetById.sql
-		DATA\dbo\Stored Procedures\spSale_Insert.sql = DATA\dbo\Stored Procedures\spSale_Insert.sql
-		DATA\dbo\Stored Procedures\spSale_LookUp.sql = DATA\dbo\Stored Procedures\spSale_LookUp.sql
-		DATA\dbo\Stored Procedures\spSaleDetail_Insert.sql = DATA\dbo\Stored Procedures\spSaleDetail_Insert.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
