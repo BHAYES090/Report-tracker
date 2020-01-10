@@ -2,16 +2,9 @@
 using RTDesktopUI.Library.API;
 using RTDesktopUI.Library.EventModels;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
 using System.Management.Automation;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using WPFTRACKERUI.Helpers;
 
 
 namespace WPFTRACKERUI.ViewModels

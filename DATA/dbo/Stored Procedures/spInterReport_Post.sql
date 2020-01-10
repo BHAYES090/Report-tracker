@@ -3,7 +3,7 @@
     @UserNameEmailAddress nvarchar(100),
     @PhoneNumber varchar(20),
     @CommentBox nvarchar(200),
-    @CreateDate datetime2(7)
+    @CreateDate nvarchar(50)
 
 AS
 BEGIN

@@ -57,12 +57,13 @@
 
         <!-- Login row -->
         <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Padding="20 5"
-                HorizontalAlignment="Center" x:Name="LogIn" FontFamily="Monotype Corsiva" Opacity="0.7" Click="LogIn_Click">
+                HorizontalAlignment="Center" x:Name="LogIn" FontFamily="Monotype Corsiva" Opacity="0.7" >
             Log In
         </Button>
         <!--<Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Background="#FF851515">
             <materialDesign:PackIcon Kind="Login"/>
+        
         </Button>-->
-
+<!--Click="LogIn_Click"-->
     </Grid>
 </UserControl>

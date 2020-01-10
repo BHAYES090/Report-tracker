@@ -15,15 +15,16 @@ namespace RTDesktopUI.Library.API
         {
             _apiHelper = apiHelper;
         }
-        public async Task<ReportModel> PostReport(string UserNameEmailAddress, string PhoneNumber, string CommentBox, DateTime CreateDate)
+        public async Task<ReportModel> PostReport(string CreateDate, string UserNameEmailAddress, string PhoneNumber, string CommentBox)
         {
             var report = new FormUrlEncodedContent(new[]
             {
-                //new KeyValuePair<string string>("CreateDate", CreateDate),
-                new KeyValuePair<string, string>("CommentBox", CommentBox),
+                new KeyValuePair<string, string>("CreateDate", CreateDate),
                 new KeyValuePair<string, string>("UserNameEmailAddress", UserNameEmailAddress),
-                new KeyValuePair<string, string>("PhoneNumber", PhoneNumber)
-                
+                new KeyValuePair<string, string>("PhoneNumber", PhoneNumber),
+                new KeyValuePair<string, string>("CommentBox", CommentBox)
+
+
             });
             using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/Report", report))
             {
