@@ -25,7 +25,6 @@ namespace RTDesktopUI.Library.API
                 new KeyValuePair<string, string>("PhoneNumber", PhoneNumber)
                 
             });
-
             using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/Report", report))
             {
                 if (response.IsSuccessStatusCode)
