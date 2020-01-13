@@ -17,8 +17,6 @@ namespace WPFTRACKERUI.Helpers
             var box = d as PasswordBox;
             if (box != null)
             {
-                // this funny little dance here ensures that we've hooked the
-                // PasswordChanged event once, and only once.
                 box.PasswordChanged -= PasswordChanged;
                 box.PasswordChanged += PasswordChanged;
             }
