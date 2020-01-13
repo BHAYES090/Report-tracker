@@ -1,16 +1,13 @@
-﻿using RTDesktopUI.Library.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RTDesktopUI.Library.API
 {
     public class ReportEndpoint : IReportEndpoint
     {
-        private IAPIHelper _apiHelper;
+        private readonly IAPIHelper _apiHelper;
         public ReportEndpoint(IAPIHelper apiHelper)
         {
             _apiHelper = apiHelper;
@@ -23,14 +20,12 @@ namespace RTDesktopUI.Library.API
                 new KeyValuePair<string, string>("UserNameEmailAddress", UserNameEmailAddress),
                 new KeyValuePair<string, string>("PhoneNumber", PhoneNumber),
                 new KeyValuePair<string, string>("CommentBox", CommentBox)
-
-
             });
             using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsync("/api/Report", report))
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    var result = await response.Content.ReadAsAsync<Task>();
+                    await response.Content.ReadAsAsync<Task>();
                 }
                 else
                 {
@@ -40,21 +35,3 @@ namespace RTDesktopUI.Library.API
         }
     }
 }
-
-//        public async Task 
-//        {
-//            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/InterReport", report))
-//            {
-//                if (response.IsSuccessStatusCode)
-//                {
-//                    //var result = await response.Content.ReadAsAsync<List<ReportModel>>();
-//                    //return result;
-//                }
-//                else
-//                {
-//                    throw new Exception(response.ReasonPhrase);
-//                }
-//            }
-//        }
-//    }
-//}
