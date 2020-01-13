@@ -65,6 +65,7 @@ namespace WPFTRACKERUI.ViewModels
         /// I should be proud, although this issue has left me batter and beaten mentally. A lot of devs have these crazy UI 
         /// designs and I think I should figure out how to spruce up the xaml. 
         /// Pat on the back my guy you did it, just a couple more tweeks away from a fully functioning application. 
+        /// Also I have to look up information on SQL Injecttions to ensure that my current system is at a low risk. 
         /// </summary>
         /// <param name="CreateDate"></param>
         /// <param name="UserNameEmailAddress"></param>
