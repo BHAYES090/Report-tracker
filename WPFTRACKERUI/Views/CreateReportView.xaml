@@ -52,8 +52,8 @@
         <!--<TextBlock x:Name="FileNameLabel" Text="File Name: " Grid.Row="7"/>-->
         <!--<Button x:Name="BrowseButton" Content="Browse..." Grid.Row="8" Margin="50 10 50 10"/>
         <Button x:Name="selectButton" Content="Select" Grid.Row="9" Margin="50 10 50 10"/>-->
-        <Button x:Name="CreateReport" Click="CreateReport_Click" Content="Create Report" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="50,0,50,2" Grid.RowSpan="2" Height="33" VerticalAlignment="Bottom"  />
-       
+        <Button x:Name="CreateReport"  Content="Create Report" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="50,0,50,2" Grid.RowSpan="2" Height="33" VerticalAlignment="Bottom"  />
+       <!--Click="CreateReport_Click"-->
         <TextBlock x:Name="AdminInformation" Text="Administator Information: " TextDecorations="Underline" Grid.Column="3" Grid.Row="7" FontSize="16"/>
         <TextBlock x:Name="AdminInformationContinued" Text="Admin info continued" Grid.Column="3" Grid.Row="8"/>
         <TextBlock x:Name="ReportQuantity"/>

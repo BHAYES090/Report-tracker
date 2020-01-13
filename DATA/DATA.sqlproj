@@ -65,6 +65,7 @@
     <Folder Include="dbo\Views" />
     <Folder Include="dbo\Stored Procedures" />
     <Folder Include="Publish Locations" />
+    <Folder Include="dbo\Constraints" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish Locations\DATA.publish.xml" />
@@ -74,6 +75,9 @@
     <Build Include="dbo\Tables\User1.sql" />
     <Build Include="dbo\Tables\InterReport.sql" />
     <Build Include="dbo\Stored Procedures\spInterReport_Post.sql" />
+    <Build Include="dbo\Constraints\NoSpecialCharsUserName.sql" />
+    <Build Include="dbo\Constraints\NoSpecialCharPhoneNumber.sql" />
+    <Build Include="dbo\Constraints\NoSpecialCharsComment.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DATA.refactorlog" />

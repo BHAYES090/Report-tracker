@@ -15,7 +15,7 @@ namespace RTDesktopUI.Library.API
         {
             _apiHelper = apiHelper;
         }
-        public async Task<ReportModel> PostReport(string CreateDate, string UserNameEmailAddress, string PhoneNumber, string CommentBox)
+        public async Task PostReport(string CreateDate, string UserNameEmailAddress, string PhoneNumber, string CommentBox)
         {
             var report = new FormUrlEncodedContent(new[]
             {
@@ -26,12 +26,11 @@ namespace RTDesktopUI.Library.API
 
 
             });
-            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/Report", report))
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsync("/api/Report", report))
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    var result = await response.Content.ReadAsAsync<ReportModel>();
-                    return result;
+                    var result = await response.Content.ReadAsAsync<Task>();
                 }
                 else
                 {
