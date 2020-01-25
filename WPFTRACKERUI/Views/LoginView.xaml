@@ -8,9 +8,6 @@
              mc:Ignorable="d" Background="White" FontSize="24"
              d:DesignHeight="414" d:DesignWidth="750">
     <Grid>
-        <!--<Grid.Background>
-            --><!--<ImageBrush ImageSource="Vision_fantástica_o_Asmodea_(Goya).jpg"/>--><!--
-        </Grid.Background>-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="auto" />
@@ -28,8 +25,6 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!--<Rectangle Grid.ColumnSpan="4" Grid.RowSpan="8" Margin="2,83,188,86" Fill="DarkSlateGray" RadiusY="10" RadiusX="10" Grid.Column="1"/>-->
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="40" 
                    FontFamily="Monotype Corsiva" MaxWidth="450" Foreground="#FF970B0B">
             Login
@@ -40,30 +35,22 @@
                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
                    Foreground="red" MaxWidth="300" 
                    TextWrapping="Wrap" Margin="0 0 0 20"/>
-
         <!-- User Name Row -->
         <TextBlock Grid.Row="3" Grid.Column="1" Margin="18 9 2 11" FontSize="18" FontFamily="Monotype Corsiva" Foreground="#FFAE1010">
             Username:
         </TextBlock>
         <TextBox x:Name="UserName" Grid.Row="3" Grid.Column="2" MinWidth="250" 
                  Margin="0 0 0 10" FontSize="24" Foreground="Black" Background="#FFABADB3" FontFamily="Microsoft Sans Serif" Opacity="0.5"/>
-
         <!--Password row-->
         <TextBlock Grid.Row="4" Grid.Column="1" Margin="18 9 2 11" FontSize="18"  FontFamily="Monotype Corsiva" Foreground="#FF970B0B">
             Password:
         </TextBlock>
         <PasswordBox x:Name="Password" Grid.Row="4" Grid.Column="2" MinWidth="250"
                      Margin="0 0 0 10" Background="#FFABADB3" FontFamily="Microsoft Sans Serif" Opacity="0.5"/>
-
         <!-- Login row -->
         <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Padding="20 5"
                 HorizontalAlignment="Center" x:Name="LogIn" FontFamily="Monotype Corsiva" Opacity="0.7" >
             Log In
         </Button>
-        <!--<Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Background="#FF851515">
-            <materialDesign:PackIcon Kind="Login"/>
-        
-        </Button>-->
-<!--Click="LogIn_Click"-->
     </Grid>
 </UserControl>

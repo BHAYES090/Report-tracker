@@ -3,11 +3,11 @@
 namespace WPFTRACKERUI.Views
 {
     /// <summary>
-    /// Interaction logic for TESTReportView.xaml
+    /// Interaction logic for ReportDashboardView.xaml
     /// </summary>
-    public partial class TESTReportView : UserControl
+    public partial class ReportDashboardView : UserControl
     {
-        public TESTReportView()
+        public ReportDashboardView()
         {
             InitializeComponent();
         }

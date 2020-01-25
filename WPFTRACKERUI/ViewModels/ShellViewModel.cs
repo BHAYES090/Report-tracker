@@ -6,31 +6,27 @@ namespace WPFTRACKERUI.ViewModels
     public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
     {
         private IEventAggregator _events;
-        //private SalesViewModel _salesVM;
-        //private TESTReportViewModel _testReportVM;
         private CreateReportViewModel _createReportVM;
+        private ReportDashboardViewModel _testReportVM;
+        
         
 
         public ShellViewModel(IEventAggregator events,
-            //SalesViewModel salesVM)//,
-            CreateReportViewModel createReportVM)
-            //TESTReportViewModel testReportVM)
+            CreateReportViewModel createReportVM,
+            ReportDashboardViewModel testReportVM)
         {
             _events = events;
-            //_salesVM = salesVM;
             _createReportVM = createReportVM;
-            //_testReportVM = testReportVM;
+            _testReportVM = testReportVM;
            
-            
             _events.Subscribe(this);
 
-            
             ActivateItem(IoC.Get<LoginViewModel>());
         }
-
         public void Handle(LogOnEvent message)
         {
-            ActivateItem(/*_salesVM_testReportVM */ _createReportVM);
+            ActivateItem(_createReportVM);
+            ActivateItem(_testReportVM );
         }
     }
 }

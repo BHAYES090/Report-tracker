@@ -1,14 +1,26 @@
 ﻿using Caliburn.Micro;
-using System.Windows;
+using System.Windows.Input;
 using WPFTRACKERUI.Views;
 
 namespace WPFTRACKERUI.ViewModels
 {
-    public class TESTReportViewModel : Screen
+    public class ReportDashboardViewModel : Screen
     {
+		public ICommand Search;
 		private string _keywordSearch;
 		private string _dateTimePicker;
 		private string _reportId;
+		private CreateReportView _createReportView;
+
+		public CreateReportView CreateReportView
+		{
+			get { return _createReportView; }
+			set 
+			{
+				_createReportView = value;
+				NotifyOfPropertyChange(() => CreateReportView);
+			}
+		}
 
 		public string KeywordSearch
 		{
@@ -28,19 +40,6 @@ namespace WPFTRACKERUI.ViewModels
 				NotifyOfPropertyChange(() => DateTimePicker);
 			}
 		}
-		/// <summary>
-		/// the below statement can be tossed out, it simply servers the purpose of not greying out the 
-		/// Creat Report Box. 
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		//public void CreateButtonClicked(object sender, RoutedEventArgs e)
-		//{
-		//	CreateReportView subWindow = new CreateReportView();
-		//	var host = new Window();
-		//	host.Content = subWindow;
-		//	host.Show();
-		//}
 		public string ReportId
 		{
 			get { return _reportId; }
@@ -50,7 +49,7 @@ namespace WPFTRACKERUI.ViewModels
 				NotifyOfPropertyChange(() => ReportId);
 			}
 		}
-		public void ReportSearch()
+		public static void ReportSearch()
 		{
 
 		}
@@ -66,19 +65,5 @@ namespace WPFTRACKERUI.ViewModels
 				return output;
 			}
 		}
-
-		public void CreateReport_Click(object sender, RoutedEventArgs e)
-		{
-			CreateReportView subWindow = new CreateReportView();
-			var host = new Window();
-			host.Content = subWindow;
-			host.Show();
-		}
-
-		//public bool CanCreateReport
-		//{
-
-			
-		//}
 	}
 }

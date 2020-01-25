@@ -1,8 +1,10 @@
 ﻿using Caliburn.Micro;
 using RTDesktopUI.Library.API;
 using System;
+using System.Management.Automation;
 using System.Net;
 using System.Net.Mail;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WPFTRACKERUI.ViewModels
@@ -58,7 +60,19 @@ namespace WPFTRACKERUI.ViewModels
         public async Task CreateReport(string CreateDate, string UserNameEmailAddress, string PhoneNumber, string CommentBox)
         {
             await _reportEndpoint.PostReport(CreateDate, UserNameEmailAddress, PhoneNumber, CommentBox);
+            
+            using (PowerShell PowerShellInstance = PowerShell.Create())
+            {
+                PowerShellInstance.AddScript("psr.exe /stop");
 
+                IAsyncResult result1 = PowerShellInstance.BeginInvoke();
+
+                if (result1.IsCompleted == false)
+                {
+                    Console.WriteLine();
+                    Thread.Sleep(1000);
+                }
+            }
             using (MailMessage mail = new MailMessage())
             {
                 mail.From = new MailAddress("ReportTracker@outlook.com");
@@ -76,12 +90,29 @@ namespace WPFTRACKERUI.ViewModels
                 }
             }
             ClearReport();
+            StartProcess();
         }
         private void ClearReport()
         {
             UserNameEmailAddress = "";
             PhoneNumber = "";
             CommentBox = "";
+        }
+        private async void StartProcess()
+        {
+            await Task.Delay(5000);
+            using (PowerShell PowerShellInstance = PowerShell.Create())
+            {
+                PowerShellInstance.AddScript("psr.exe /start /output C:/Users/bobby/Documents/Steps.zip");
+
+                IAsyncResult result1 = PowerShellInstance.BeginInvoke();
+
+                while (result1.IsCompleted == false)
+                {
+                    Console.WriteLine();
+                    Thread.Sleep(1);
+                }
+            }
         }
     }
 }

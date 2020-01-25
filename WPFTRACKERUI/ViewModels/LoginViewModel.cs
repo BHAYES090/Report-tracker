@@ -53,7 +53,6 @@ namespace WPFTRACKERUI.ViewModels
                 return output;
             }
         }
-
         private string _errorMessage;
         public string ErrorMessage
         {
@@ -65,8 +64,6 @@ namespace WPFTRACKERUI.ViewModels
                 NotifyOfPropertyChange(() => ErrorMessage);
             }
         }
-
-
         public bool CanLogIn
         {
             get
