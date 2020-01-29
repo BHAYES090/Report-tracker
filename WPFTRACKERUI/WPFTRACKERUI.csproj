@@ -75,7 +75,7 @@
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ReportPageView.xaml.cs">
+    <Compile Include="Views\ReportPageView.cs">
       <DependentUpon>ReportPageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">

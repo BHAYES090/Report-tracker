@@ -4,6 +4,7 @@ namespace RTDesktopUI.Library.Models
 {
     public class ReportModel
     {
+
         public int Id { get; set; } 
         public string CreateDate { get; set; } = DateTime.Now.ToString("MM DD YYYY HH:MM:SS");
         public string UserNameEmailAddress { get; set; }

@@ -7,18 +7,23 @@ namespace WPFTRACKERUI.ViewModels
     {
         private IEventAggregator _events;
         private CreateReportViewModel _createReportVM;
-        private ReportDashboardViewModel _testReportVM;
-        
-        
+        //private ReportDashboardViewModel _testReportVM;
+        //private ReportPageViewModel _reportPageVM;
+
+
 
         public ShellViewModel(IEventAggregator events,
-            CreateReportViewModel createReportVM,
-            ReportDashboardViewModel testReportVM)
+            CreateReportViewModel createReportVM
+            //,
+            //ReportDashboardViewModel testReportVM,
+            //ReportPageViewModel reportPageVM
+            )
         {
             _events = events;
             _createReportVM = createReportVM;
-            _testReportVM = testReportVM;
-           
+            //_testReportVM = testReportVM;
+            //_reportPageVM = reportPageVM;
+
             _events.Subscribe(this);
 
             ActivateItem(IoC.Get<LoginViewModel>());
@@ -26,7 +31,8 @@ namespace WPFTRACKERUI.ViewModels
         public void Handle(LogOnEvent message)
         {
             ActivateItem(_createReportVM);
-            ActivateItem(_testReportVM );
+            //ActivateItem(_testReportVM);
+            //ActivateItem(_reportPageVM);
         }
     }
 }

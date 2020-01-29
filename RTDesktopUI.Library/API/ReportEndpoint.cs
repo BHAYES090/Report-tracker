@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RTDesktopUI.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ namespace RTDesktopUI.Library.API
 {
     public class ReportEndpoint : IReportEndpoint
     {
-        private readonly IAPIHelper _apiHelper;
+        private IAPIHelper _apiHelper;
         public ReportEndpoint(IAPIHelper apiHelper)
         {
             _apiHelper = apiHelper;

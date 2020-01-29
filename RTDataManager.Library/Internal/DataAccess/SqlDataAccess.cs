@@ -28,7 +28,6 @@ namespace RTDataManager.Library.Internal.DataAccess
                 return rows;
             }
         }
-
         public void SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
         {
             string connectionString = GetConnectionString(connectionStringName);

@@ -55,13 +55,13 @@ namespace DataManager1.Controllers
         {
             //TODO: Save File
         }
-        //////////////////////////// The above input parameter was uploaded with Microsoft.AspNet.Http in order to upload 
-        //////////////////////////// files to Swagger. This was done so that I may upload an image. IT IS VERY IMPORTANT THAT I DO 
-        //////////////////////////// NOT FORGET ABOUT THIS SYSTEM PLACED HERE FOR I WILL USE IT IN THE FUTURE TO CONTINUE THIS PROJECT 
-        ////////////////////////////AND FINALLY UPLOAD AN IMAGE TO THE API. CURRENTLY THE API IS RUNNING IN .NETFRAMEWORK however 
-        ////////////////////////////I will complete this later down the road to ensure that everything is copacetic. 
-        ////////////////////////////while downloading the nuget package I accidentilly may have downloaded the wrong file
-        ////////////////////////////I must ensure that nothing unnessecary is downloaded. 
-        ////////////////////////////See bookmarks in chrome for link on how to enable file upload in .net core.
+        //// The above input parameter was uploaded with Microsoft.AspNet.Http in order to upload 
+        //// files to Swagger. This was done so that I may upload an image. IT IS VERY IMPORTANT THAT I DO 
+        //// NOT FORGET ABOUT THIS SYSTEM PLACED HERE FOR I WILL USE IT IN THE FUTURE TO CONTINUE THIS PROJECT 
+        ////AND FINALLY UPLOAD AN IMAGE TO THE API. CURRENTLY THE API IS RUNNING IN .NETFRAMEWORK however 
+        ////I will complete this later down the road to ensure that everything is copacetic. 
+        ////while downloading the nuget package I accidentilly may have downloaded the wrong file
+        ////I must ensure that nothing unnessecary is downloaded. 
+        ////See bookmarks in chrome for link on how to enable file upload in .net core.
     }
 }

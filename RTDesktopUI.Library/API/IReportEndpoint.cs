@@ -1,4 +1,4 @@
-﻿using System;
+﻿using RTDesktopUI.Library.Models;
 using System.Threading.Tasks;
 
 namespace RTDesktopUI.Library.API

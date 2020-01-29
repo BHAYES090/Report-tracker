@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Dapper;
 using RTDesktopUI.Library.Configuration;
-using RTDesktopUI.Library.DataAndSQL;
 using RTDesktopUI.Library.Models;
 
 namespace RTDesktopUI.Library.DataAndSQL
@@ -18,10 +10,8 @@ namespace RTDesktopUI.Library.DataAndSQL
 
         public ReportModel CreateReport(ReportModel model)
         {
-
-
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection
-                  (GlobalConfig.CnnString("REPORTSDATASQL")))
+                  (GlobalConfig.CnnString("Reports")))
             {
                 
                 var P = new DynamicParameters();

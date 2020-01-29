@@ -1,4 +1,5 @@
 ﻿using RTDataManager.Library.Internal.DataAccess;
+using System.Collections.Generic;
 using ReportModel = RTDataManager.Library.Models.ReportModel;
 
 namespace RTDataManager.Library.DataAccess
